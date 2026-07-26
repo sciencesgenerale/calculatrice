@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculatrice avancée avec conversion de devises (euro, dollars, livres sterling, bitcoin) et un design moderne.">
+    <meta name="keywords" content="calculatrice, conversion de devises, euro, dollar, livre sterling, bitcoin">
+    <meta name="author" content="Ton Nom">
+    <title>Calculatrice avec Conversion de Devises</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Calculatrice</h1>
+    <input type="text" id="display" disabled>
+    <div class="button-grid">
+        <button onclick="append('3.14')">π</button>
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('/')">/</button>
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('*')">*</button>
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('-')">-</button>
+        <button onclick="append('0')">0</button>
+        <button onclick="append('(')">(</button>
+        <button onclick="append(')')">)</button>
+        <button onclick="append('+')">+</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+    </div>
+
+    <h2>Convertisseur de Devises</h2>
+    <input type="number" id="amount" placeholder="Montant en €" />
+    <div class="currency-buttons">
+        <button onclick="convert('BTC')">Convertir en <img src="images/BitcoinSign.svg.png" width="30" height="30" alt="Bitcoin" /></button>
+        <button onclick="convert('USD')">Convertir en <img src="images/Double-barred_dollar_sign.svg.png" width="30" height="30" alt="Dollar" /></button>
+        <button onclick="convert('GBP')">Convertir en <img src="images/livres sterling.png" width="30" height="30" alt="Livre Sterling" /></button>
+    </div>
+
+    <div class="flags">
+        <img src="images/Drapeau_de_la_France.jpg" width="80" alt="France" />
+        <img src="images/Drapeau_du_Royaume-Uni_de_Grande-Bretagne_et_dIrlande_du_Nord.jpg" width="80" alt="Royaume-Uni" />
+        <img src="images/Drapeau_des_États-Unis.jpg" width="80" alt="États-Unis" />
+        <img src="images/Drapeau_de_lAlgérie.jpg" width="80" alt="Algérie" />
+    </div>
+
+    <p id="conversionResult"></p>
+</div>
+
+<script src="script3.js"></script>
+</body>
+</html>
